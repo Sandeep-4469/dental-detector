@@ -1,12 +1,9 @@
 from __future__ import annotations
 
-from typing import Optional
-
 import cv2
 import numpy as np
 
-from .models import Detection, DetectionResult, LABEL_COLORS
-
+from .models import LABEL_COLORS, DetectionResult
 
 _DEFAULT_COLOR = (0, 255, 0)
 

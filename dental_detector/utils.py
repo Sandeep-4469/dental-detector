@@ -2,12 +2,11 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
-from typing import Union, Tuple
+from typing import Tuple, Union
 
 import cv2
 import numpy as np
 from PIL import Image
-
 
 ImageInput = Union[str, Path, np.ndarray, Image.Image]
 

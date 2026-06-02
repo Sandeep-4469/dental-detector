@@ -3,17 +3,15 @@
 from __future__ import annotations
 
 import json
-from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 import numpy as np
 import pytest
 from PIL import Image
 
-from dental_detector import DentalDetector, Detection, DetectionResult, TOOTH_CLASSES
-from dental_detector.utils import load_image, letterbox, to_pil
+from dental_detector import TOOTH_CLASSES, DentalDetector, Detection, DetectionResult
+from dental_detector.utils import letterbox, load_image, to_pil
 from dental_detector.visualization import annotate
-
 
 # ---------------------------------------------------------------------------
 # Fixtures
@@ -170,7 +168,6 @@ class TestLetterbox:
         assert out.shape == (640, 640, 3)
 
     def test_aspect_ratio_preserved(self):
-        import cv2
         img = np.zeros((200, 100, 3), dtype=np.uint8)
         out, scale, (left, top) = letterbox(img, (640, 640))
         assert out.shape == (640, 640, 3)
@@ -218,7 +215,6 @@ class TestAnnotate:
 
 def _make_mock_model(detections):
     """Build a mock ultralytics YOLO result."""
-    import torch
 
     boxes_mock = MagicMock()
     boxes_mock.xyxy.cpu().numpy.return_value = np.array(

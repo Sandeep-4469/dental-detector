@@ -5,7 +5,6 @@ from pathlib import Path
 from typing import Optional, Union
 
 import cv2
-import numpy as np
 from PIL import Image
 
 try:
@@ -13,7 +12,7 @@ try:
 except ImportError:
     YOLO = None  # type: ignore[assignment,misc]
 
-from .models import Detection, DetectionResult, TOOTH_CLASSES
+from .models import TOOTH_CLASSES, Detection, DetectionResult
 from .utils import ImageInput, load_image, to_pil
 from .visualization import annotate as _annotate
 
