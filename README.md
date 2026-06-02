@@ -3,7 +3,7 @@
 [![PyPI version](https://img.shields.io/pypi/v/dental-detector.svg)](https://pypi.org/project/dental-detector/)
 [![Python](https://img.shields.io/pypi/pyversions/dental-detector.svg)](https://pypi.org/project/dental-detector/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Tests](https://github.com/sandeepvissa/dental-detector/actions/workflows/tests.yml/badge.svg)](https://github.com/sandeepvissa/dental-detector/actions/workflows/tests.yml)
+[![Tests](https://github.com/Sandeep-4469/dental-detector/actions/workflows/tests.yml/badge.svg)](https://github.com/Sandeep-4469/dental-detector/actions/workflows/tests.yml)
 
 **Tooth detection in maxilla and mandible dental images using YOLOv8.**
 

@@ -55,9 +55,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/sandeepvissa/dental-detector"
-Repository = "https://github.com/sandeepvissa/dental-detector"
-"Bug Tracker" = "https://github.com/sandeepvissa/dental-detector/issues"
+Homepage = "https://github.com/Sandeep-4469/dental-detector"
+Repository = "https://github.com/Sandeep-4469/dental-detector"
+"Bug Tracker" = "https://github.com/Sandeep-4469/dental-detector/issues"
 
 [project.scripts]
 dental-detector = "dental_detector.cli:main"
