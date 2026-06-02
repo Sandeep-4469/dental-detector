@@ -1,0 +1,77 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dental-detector"
+version = "0.1.0"
+description = "Tooth detection in maxilla and mandible dental images using YOLOv8"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+authors = [
+    { name = "Sandeep Vissa", email = "sandeepvissa2002@gmail.com" },
+]
+keywords = [
+    "dental",
+    "teeth",
+    "tooth-detection",
+    "yolo",
+    "object-detection",
+    "maxilla",
+    "mandible",
+    "dental-imaging",
+    "computer-vision",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Healthcare Industry",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = [
+    "ultralytics>=8.0.0",
+    "opencv-python>=4.5.0",
+    "Pillow>=9.0.0",
+    "numpy>=1.21.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/sandeepvissa/dental-detector"
+Repository = "https://github.com/sandeepvissa/dental-detector"
+"Bug Tracker" = "https://github.com/sandeepvissa/dental-detector/issues"
+
+[project.scripts]
+dental-detector = "dental_detector.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["dental_detector"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py38"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
