@@ -5,7 +5,7 @@ from .models import Detection, DetectionResult, TOOTH_CLASSES, LABEL_COLORS
 from .utils import load_image, to_pil, letterbox
 from .visualization import annotate
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __all__ = [
     "DentalDetector",
     "Detection",

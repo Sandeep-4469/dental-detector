@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "dental-detector"
-version = "0.1.0"
+version = "0.1.1"
 description = "Tooth detection in maxilla and mandible dental images using YOLOv8"
 readme = "README.md"
 license = { text = "MIT" }
